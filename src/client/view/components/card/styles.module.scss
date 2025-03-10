@@ -1,0 +1,39 @@
+.card {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-left: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.date {
+  color: #9dbefd;
+  font-family: Bebas Neue;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 120%;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #42567a;
+}
+
+@media (max-width: 500px) {
+  .card {
+    max-width: 210px;
+    min-height: 250px;
+    overflow: hidden;
+    position: relative;
+    margin-left: 0;
+  }
+
+  .title {
+    font-size: 14px;
+    line-height: 145%;
+  }
+}

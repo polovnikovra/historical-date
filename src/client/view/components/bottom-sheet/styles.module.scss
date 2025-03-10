@@ -1,0 +1,9 @@
+.bottom-sheet {
+  .empty-section {
+    min-height: 280px;
+  }
+
+  @media (max-width: 500px) {
+    position: relative;
+  }
+}

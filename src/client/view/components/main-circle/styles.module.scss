@@ -1,0 +1,160 @@
+.ellipse {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 50%;
+
+  transition: all 0.3s ease;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  color: #42567a;
+}
+
+.ellipse:hover,
+.literature-active,
+.movies-active,
+.painting-active,
+.technique-active,
+.architecture-active,
+.science-active {
+  background-color: #f4f4f9;
+  z-index: 100;
+  border: 1px solid #303e58;
+  cursor: pointer;
+
+  img {
+    display: none;
+  }
+}
+
+.literature-position {
+  position: absolute;
+  top: 5px;
+  right: 97px;
+}
+
+.literature-position:hover::after,
+.literature-active::after {
+  content: "1";
+}
+
+.movies-position {
+  position: absolute;
+  top: 220px;
+  right: -28px;
+}
+
+.movies-position:hover::after,
+.movies-active::after {
+  content: "2";
+}
+
+.painting-position {
+  position: absolute;
+  bottom: 6px;
+  right: 96px;
+}
+
+.painting-position:hover::after,
+.painting-active::after {
+  content: "3";
+}
+
+.technique-position {
+  position: absolute;
+  bottom: 5px;
+  left: 97px;
+}
+
+.technique-position:hover::after,
+.technique-active::after {
+  content: "4";
+}
+
+.architecture-position {
+  position: absolute;
+  top: 220px;
+  left: -28px;
+}
+
+.architecture-position:hover::after,
+.architecture-active::after {
+  content: "5";
+}
+
+.science-position {
+  position: absolute;
+  top: 6px;
+  left: 97px;
+}
+
+.science-position:hover::after,
+.science-active::after {
+  content: "6";
+}
+
+.section-name-none {
+  display: none;
+}
+
+.section-name {
+  display: block;
+  position: absolute;
+  left: 70px;
+  font-family: PT Sans;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0%;
+}
+
+@media (max-width: 500px) {
+  .ellipse {
+    cursor: pointer;
+  }
+
+  .literature-position,
+  .movies-position,
+  .painting-position,
+  .technique-position,
+  .architecture-position,
+  .science-position {
+    position: static;
+  }
+
+  .ellipse:hover,
+  .literature-active,
+  .movies-active,
+  .painting-active,
+  .technique-active,
+  .architecture-active,
+  .science-active {
+    background-color: #f4f4f9;
+    z-index: 100;
+    border: none;
+
+    img {
+      display: block;
+    }
+  }
+
+  .literature-position:hover::after,
+  .movies-position:hover::after,
+  .painting-position:hover::after,
+  .technique-position:hover::after,
+  .architecture-position:hover::after,
+  .science-position:hover::after,
+  .literature-active::after,
+  .movies-active::after,
+  .painting-active::after,
+  .technique-active::after,
+  .architecture-active::after,
+  .science-active::after {
+    content: none;
+  }
+}

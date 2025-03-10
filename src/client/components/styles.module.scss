@@ -1,0 +1,14 @@
+.first-date {
+  color: #9dbefd;
+  margin-right: 70px;
+}
+
+.second-date {
+  color: #ee82ee;
+}
+
+@media (max-width: 500px) {
+  .first-date {
+    margin-right: 30px;
+  }
+}

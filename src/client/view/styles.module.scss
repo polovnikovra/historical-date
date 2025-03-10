@@ -1,0 +1,195 @@
+.main-block {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .main-numbers {
+    position: absolute;
+    display: flex;
+    top: 30px;
+    left: 15%;
+
+    pre {
+      font-family: PT Sans;
+      font-weight: 700;
+      font-size: 200px;
+      line-height: 160px;
+      letter-spacing: -2%;
+      text-align: center;
+    }
+  }
+
+  .main-circle {
+    height: 500px;
+    width: 500px;
+    border: 1px solid #42567a;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 80px;
+  }
+
+  .literature {
+    transform: rotate(0deg);
+    transition-duration: 0.5s;
+  }
+
+  .movies {
+    transform: rotate(-60deg);
+    transition-duration: 0.5s;
+  }
+
+  .movies > div {
+    transform: rotate(60deg);
+  }
+
+  .painting {
+    transform: rotate(-120deg);
+    transition-duration: 0.5s;
+  }
+
+  .painting > div {
+    transform: rotate(120deg);
+  }
+
+  .technique {
+    transform: rotate(-180deg);
+    transition-duration: 0.5s;
+  }
+
+  .technique > div {
+    transform: rotate(180deg);
+  }
+
+  .architecture {
+    transform: rotate(120deg);
+    transition-duration: 0.5s;
+  }
+
+  .architecture > div {
+    transform: rotate(-120deg);
+  }
+
+  .science {
+    transform: rotate(60deg);
+    transition-duration: 0.5s;
+  }
+
+  .science > div {
+    transform: rotate(-60deg);
+  }
+
+  .horizontal-divider {
+    height: 1px;
+    background-color: #42567a;
+    position: relative;
+    top: 330px;
+  }
+
+  .vertical-divider {
+    height: 1px;
+    background-color: #42567a;
+    position: relative;
+    transform: rotate(90deg);
+    top: 250px;
+  }
+
+  .side-title {
+    position: absolute;
+    top: 50px;
+    display: flex;
+    align-items: center;
+
+    .side-text {
+      width: 10%;
+      font-size: 56px;
+      font-weight: 700;
+      line-height: 120%;
+      letter-spacing: 0%;
+      color: #42567a;
+    }
+  }
+
+  @media (max-width: 500px) {
+    padding-left: 20px;
+
+    .main-circle {
+      width: inherit;
+      border: none;
+      border-radius: 0;
+      position: absolute;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 8px;
+      bottom: 25px;
+      left: 150px;
+      z-index: 100;
+    }
+
+    .literature,
+    .literature > div,
+    .movies,
+    .movies > div,
+    .painting,
+    .painting > div,
+    .technique,
+    .technique > div,
+    .architecture,
+    .architecture > div,
+    .science,
+    .science > div {
+      transform: none;
+      cursor: pointer;
+    }
+
+    .vertical-divider {
+      display: none;
+    }
+    .horizontal-divider {
+      width: 95%;
+    }
+
+    .section-mobile-width {
+      position: absolute;
+      top: 280px;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 2%;
+      color: #42567a;
+    }
+
+    .main-numbers {
+      top: 100px;
+      left: 50px;
+      pre {
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 100%;
+        letter-spacing: -2%;
+      }
+    }
+
+    .side-title {
+      .side-divider {
+        display: none;
+      }
+
+      .side-text {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 120%;
+        letter-spacing: 0%;
+        color: #42567a;
+      }
+    }
+  }
+}
+
+.side-divider {
+  height: 120px;
+  width: 5px;
+  background: linear-gradient(#3877ee, #ef5da8);
+  margin-right: 75px;
+}
